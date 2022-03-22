@@ -1,4 +1,4 @@
-import RequestComic from './comic';
+import RequestSearch from './search';
 
 // APIs
-export { RequestComic };
+export { RequestSearch };

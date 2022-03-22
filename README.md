@@ -10,7 +10,7 @@ Front-end architecture based on the following stack:
 
 - [React] - **V17.0.2**
 - [NextJS] - **V11.1.2**
-- [Chakra ui] - **V1.4.2**
+- [Chakra ui] - **V1.8.6**
 
 ## Getting Started
 
@@ -24,11 +24,15 @@ Front-end architecture based on the following stack:
 
 > Only `npm` is allowed in order to standardise all node installs, please use [NVM] to manage node versions.
 
-2.  Build and then start the server:
+2.  Change example.env.local to .env.local
+
+3.  Install the dependencies and devDependencies:
 
 ```sh
-  npm run dev
+  npm i
 ```
+
+> Only `npm` is allowed in order to standardise all node installs, please use [NVM] to manage node versions.
 
 > This command will both build and start the server in dev mode.
 

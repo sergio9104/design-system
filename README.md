@@ -26,11 +26,12 @@ Front-end architecture based on the following stack:
 
 2.  Change example.env.local to .env.local
 
-3.  Install the dependencies and devDependencies:
+3.  Build and then start the server:
 
 ```sh
-  npm i
+  npm run dev
 ```
+
 
 > Only `npm` is allowed in order to standardise all node installs, please use [NVM] to manage node versions.
 

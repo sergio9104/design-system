@@ -1,0 +1,15 @@
+import React from 'react';
+import {{pascalCase name}} from './index';
+
+export default {
+  title: 'Components/{{pascalCase name}}',
+  component: {{pascalCase name}},
+};
+
+const Story = args => <{{pascalCase name}} {...args} />;
+
+export const WithHeadline = Story.bind({});
+
+WithHeadline.args = {
+  headline: 'Hello from {{pascalCase name}}',
+};

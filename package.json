@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='--inspect' next -p 3002",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next -p 3000",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
@@ -10,8 +10,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "generate": "plop --plopfile ./generators/plopfile.js",
-    "test": "npx react-scripts test --env=jest-environment-jsdom-sixteen",
-    "test:coverage": "npx react-scripts test --env=jest-environment-jsdom-sixteen --coverage --watchAll"
+    "test": "jest",
+    "test:coverage": "jest --coverage --watchAll"
   },
   "husky": {
     "hooks": {
@@ -38,7 +38,7 @@
     "copy-webpack-plugin": "^10.2.4",
     "framer-motion": "^4.1.17",
     "jest-environment-jsdom-sixteen": "^2.0.0",
-    "next": "latest",
+    "next": "^12.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "storybook-addon-next-router": "^3.1.1"
@@ -51,8 +51,8 @@
     "@storybook/addon-links": "^6.4.19",
     "@storybook/react": "^6.4.19",
     "@testing-library/dom": "^8.11.3",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.4",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.40",
@@ -61,36 +61,9 @@
     "@typescript-eslint/parser": "^5.15.0",
     "babel-loader": "^8.2.3",
     "cross-env": "^7.0.3",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "husky": "latest",
+    "jest": "^28.0.2",
+    "jest-environment-jsdom": "^28.0.2",
     "lint-staged": "^12.3.7",
-    "plop": "latest",
-    "prettier": "latest",
     "typescript": "4.6.2"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "@components(.*)$": "<rootDir>/src/components/$1",
-      "@contexts(.*)$": "<rootDir>/src/contexts/$1",
-      "@templates(.*)$": "<rootDir>/src/templates/$1",
-      "@pages(.*)$": "<rootDir>/pages/$1",
-      "@styles(.*)$": "<rootDir>/src/styles/$1",
-      "@utils(.*)$": "<rootDir>/src/utils/$1",
-      "@services(.*)$": "<rootDir>/src/services/$1"
-    },
-    "coveragePathIgnorePatterns": [
-      ".stories.js",
-      "index.js",
-      "styles.js",
-      "styles/",
-      "services/",
-      "utils/",
-      "contexts/",
-      "pages/"
-    ]
-  },
-  "resolutions": {
-    "jest-environment-jsdom": "^26.0.1"
   }
 }

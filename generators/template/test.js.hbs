@@ -1,0 +1,29 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import { loadMessages, LocalizationProvider } from '@progress/kendo-react-intl';
+import { ThemeProvider } from 'styled-components';
+import theme from '@styles/theme'
+import {{pascalCase name}} from './index';
+import Messages from "@utils/translations/es";
+
+loadMessages(Messages, 'es');
+const message = Messages.confirmLoginScreen;
+
+const Props = {
+  
+};
+
+beforeEach(() => {
+    render(
+        <LocalizationProvider language='es'>
+            <ThemeProvider theme={theme}>
+                <{{pascalCase name}} {...Props} />
+            </ThemeProvider>
+        </LocalizationProvider>
+        );
+    } 
+)
+
+xtest('Its rendering', () => {
+    
+});

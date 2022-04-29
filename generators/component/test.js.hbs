@@ -1,0 +1,22 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import theme from '@styles/theme'
+import {{pascalCase name}} from './index';
+
+const Props = {
+  
+};
+
+beforeEach(() => {
+    render(
+            <ThemeProvider theme={theme}>
+                <{{pascalCase name}} {...Props} />
+            </ThemeProvider>
+        );
+    } 
+)
+
+xtest('Its rendering', () => {
+    
+});

@@ -1,0 +1,16 @@
+import type { NextPage } from 'next';
+import {{pascalCase name}}Template from '@templates/{{dashCase name}}';
+import Head from 'next/head';
+
+const {{pascalCase name}}: NextPage = () => {
+  return (
+    <>
+      <Head>
+        <title>Ayenda</title>
+      </Head>
+      <{{pascalCase name}}Template></{{pascalCase name}}Template>
+    </>
+  )
+}
+
+export default {{pascalCase name}}

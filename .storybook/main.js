@@ -5,7 +5,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   "stories": [
     "../src/components/**/*.stories.@(js|jsx|ts|tsx)",
-    "../src/templates/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   "addons": [
     "@storybook/addon-links",
@@ -28,7 +27,6 @@ module.exports = {
           "@components": path.resolve(__dirname, '../src/components/'),
           "@services": path.resolve(__dirname, '../src/services/'),
           "@pages": path.resolve(__dirname, '../pages/'),
-          "@templates": path.resolve(__dirname, '../src/templates/'),
         },
       },
     };

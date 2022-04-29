@@ -1,0 +1,17 @@
+import React from 'react';
+import {{pascalCase name}} from './index';
+
+const template = {
+  title: 'Templates/{{pascalCase name}}',
+  component: {{pascalCase name}},
+};
+
+export default template;
+
+const Story = args => <{{pascalCase name}} {...args} />;
+
+export const Default = Story.bind({});
+
+const Props = {};
+
+Default.args = Props;

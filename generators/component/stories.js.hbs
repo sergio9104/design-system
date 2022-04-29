@@ -1,15 +1,17 @@
 import React from 'react';
 import {{pascalCase name}} from './index';
 
-export default {
+const template = {
   title: 'Components/{{pascalCase name}}',
   component: {{pascalCase name}},
 };
 
+export default template;
+
 const Story = args => <{{pascalCase name}} {...args} />;
 
-export const WithHeadline = Story.bind({});
+export const Default = Story.bind({});
 
-WithHeadline.args = {
-  headline: 'Hello from {{pascalCase name}}',
-};
+const Props = {};
+
+Default.args = Props;

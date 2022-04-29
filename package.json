@@ -11,7 +11,8 @@
     "generate": "plop --plopfile ./generators/plopfile.js",
     "test": "jest",
     "test:coverage": "jest --coverage --watchAll",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -65,7 +66,7 @@
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.29.4",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "jest": "^28.0.2",
     "jest-environment-jsdom": "^28.0.2",
     "lint-staged": "^12.4.1",

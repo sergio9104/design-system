@@ -1,30 +1,31 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+if [ -z "$husky_skip_init" ]; then
+  debug () {
+    if [ "$HUSKY_DEBUG" = "1" ]; then
+      echo "husky (debug) - $1"
+    fi
+  }
 
-echo '🏗️👷 Styling, testing and building your project before committing'
+  readonly hook_name="$(basename "$0")"
+  debug "starting $hook_name..."
 
-# Check Prettier standards
-npm run lint ||
-(
-    echo 'Fix you style errors before committing';
-    false;
-)
+  if [ "$HUSKY" = "0" ]; then
+    debug "HUSKY env variable is set to 0, skipping hook"
+    exit 0
+  fi
 
-# Check tsconfig standards
-npm run check-types ||
-(
-    echo 'Fix you types errors before committing';
-    false;
-)
+  if [ -f ~/.huskyrc ]; then
+    debug "sourcing ~/.huskyrc"
+    . ~/.huskyrc
+  fi
 
-# If everything passes... Now we can commit
-echo 'Alright... Code looks good to me... Trying to build now.'
+  export readonly husky_skip_init=1
+  sh -e "$0" "$@"
+  exitCode="$?"
 
-npm run build ||
-(
-    echo 'Build failed... Please fix the errors before committing'; 
-    false;
-)
+  if [ $exitCode != 0 ]; then
+    echo "husky - $hook_name hook exited with code $exitCode (error)"
+  fi
 
-# If everything passes... Now we can commit
-echo 'Commit successful!'
+  exit $exitCode
+fi

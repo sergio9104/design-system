@@ -1,0 +1,30 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'Styling, testing and building your project before committing'
+
+# Check ESLint Standards
+npm run lint ||
+(
+        echo 'Fix ESLint errors before committing'
+        false; 
+)
+
+# Check tsconfig standards
+npm run type-check ||
+(
+    echo 'Fix ts errors before committing'
+    false;
+)
+
+# If everything passes... Now we can commit
+echo 'Alright... Code looks good to me... Trying to build now.'
+
+npm run build ||
+(
+    echo 'Fix you build errors before committing'
+    false;
+)
+
+# If everything passes... Now we can commit
+echo 'Alright... Everything looks good... Committing now.'

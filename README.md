@@ -1,4 +1,4 @@
-# Ayenda Frontend Test
+# Startupy Web
 
 ## Features
 
@@ -9,7 +9,7 @@ Project done with Nextjs + React environment, where our ui components are mostly
 Front-end architecture based on the following stack:
 
 - [React] - **V17.0.2**
-- [NextJS] - **V11.1.2**
+- [NextJS] - **V12.1.5**
 - [Chakra ui] - **V1.8.6**
 
 ## Getting Started

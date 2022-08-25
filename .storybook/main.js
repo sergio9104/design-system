@@ -4,7 +4,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   "stories": [
-    "../src/components/**/*.stories.@(js|jsx|ts|tsx)",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   "addons": [
     "@storybook/addon-links",
@@ -25,6 +25,7 @@ module.exports = {
           "emotion-theming": toPath("node_modules/@emotion/react"),
           "@styles": path.resolve(__dirname, '../src/styles/'),
           "@components": path.resolve(__dirname, '../src/components/'),
+          "@stories": path.resolve(__dirname, '../src/stories/'),
           "@services": path.resolve(__dirname, '../src/services/'),
           "@pages": path.resolve(__dirname, '../pages/'),
         },
